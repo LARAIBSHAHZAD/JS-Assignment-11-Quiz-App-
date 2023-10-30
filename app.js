@@ -91,14 +91,12 @@ function nextOption(){
     
         if(getOptions[i].checked){
             var selectedValue = getOptions[i].value;
-            // console.log(selectedValue)
             var selectedQuestion = questions[index - 1]["question"];
             var selectedAns = questions[index - 1][`option${selectedValue}`]
             var correctAns = questions[index -1][`correctAns`]
             if(correctAns === selectedAns){
                 score++;
             }
-    
         }
         getOptions[i].checked =false;
     }
