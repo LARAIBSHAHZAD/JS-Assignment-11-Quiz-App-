@@ -1,3 +1,44 @@
+var firebaseConfig = {
+    apiKey: "AIzaSyBcBQvrDbj7Nx9e8Lrb8rBXcHVBFy6X4rY",
+    authDomain: "quiz-app-0000.firebaseapp.com",
+    databaseURL: "https://quiz-app-0000-default-rtdb.firebaseio.com",
+    projectId: "quiz-app-0000",
+    storageBucket: "quiz-app-0000.appspot.com",
+    messagingSenderId: "674002022488",
+    appId: "1:674002022488:web:86a26e1f5d5a5246615a2d"
+  };
+  
+  // Initialize Firebase
+  var app = firebase.initializeApp(firebaseConfig);
+
+//   console.log(app.database)
+
+
+
+function getDataAndSubmit() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+
+    var infoObj = {
+        name: name,
+        email: email
+    };
+
+    var key = Math.random() * 324587691;
+
+    var databaseRef = firebase.database().ref("Users/Information/" + Math.round(key));
+
+    databaseRef.set(infoObj)
+        .then(function() {
+            window.location.href = "Quiz.html";
+        })
+        .catch(function(error) {
+            console.error("Error adding data to Firebase: ", error);
+        });
+}
+
+
+
 var questions = [
     {
         question:"HTML stands for",

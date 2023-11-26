@@ -1,0 +1,38 @@
+.main{
+    text-align: center;
+    padding: 10px;
+    /* color: white; */
+    /* text-transform: uppercase; */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    /* margin-top: 15%; */
+}
+.main input{
+    border-radius: 25px;
+    /* border: 2px solid white; */
+    padding: 12px;
+    width: 25%;
+    font-size: 20px;
+}
+
+.btn{
+    border-radius: 30px;
+    padding: 10px;
+    /* width: 8%; */
+    font-size: 20px;
+}
+
+.h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    margin-top: 12%;
+    font-size: 45px;
+}
+
+body{
+    background-image: url("https://img.freepik.com/free-vector/blue-geometric-shapes-background_1406-17.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}

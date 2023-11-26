@@ -1,0 +1,38 @@
+[debug] [2023-11-26T07:01:21.505Z] ----------------------------------------------------------------------
+[debug] [2023-11-26T07:01:21.508Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\anass\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-11-26T07:01:21.509Z] CLI Version:   12.7.0
+[debug] [2023-11-26T07:01:21.510Z] Platform:      win32
+[debug] [2023-11-26T07:01:21.510Z] Node Version:  v18.17.1
+[debug] [2023-11-26T07:01:21.524Z] Time:          Sun Nov 26 2023 12:01:21 GMT+0500 (Pakistan Standard Time)
+[debug] [2023-11-26T07:01:21.524Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-11-26T07:01:21.531Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-11-26T07:01:21.748Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-11-26T07:01:21.749Z] > authorizing via signed-in user (laraibshahzad9@gmail.com)
+[debug] [2023-11-26T07:01:21.749Z] [iam] checking project quiz-app-0000 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-11-26T07:01:21.751Z] > refreshing access token with scopes: []
+[debug] [2023-11-26T07:01:21.753Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-11-26T07:01:21.753Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-11-26T07:01:22.116Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-11-26T07:01:22.116Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-11-26T07:01:22.127Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/quiz-app-0000:testIamPermissions [none]
+[debug] [2023-11-26T07:01:22.127Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/quiz-app-0000:testIamPermissions x-goog-quota-user=projects/quiz-app-0000
+[debug] [2023-11-26T07:01:22.128Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/quiz-app-0000:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-11-26T07:01:22.330Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-11-26T07:01:22.330Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2023-11-26T07:01:23.724Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/quiz-app-0000:testIamPermissions 200
+[debug] [2023-11-26T07:01:23.725Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/quiz-app-0000:testIamPermissions {}
+[debug] [2023-11-26T07:01:23.725Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project quiz-app-0000:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2023-11-26T07:01:23.729Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/quiz-app-0000 [none]
+[debug] [2023-11-26T07:01:24.254Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/quiz-app-0000 403
+[debug] [2023-11-26T07:01:24.255Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/quiz-app-0000 {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2023-11-26T07:01:24.257Z] HTTP Error: 403, The caller does not have permission
+[debug] [2023-11-26T07:01:24.267Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (C:\Users\anass\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\anass\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:285:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project quiz-app-0000. Please make sure the project exists and your account has permission to access it.

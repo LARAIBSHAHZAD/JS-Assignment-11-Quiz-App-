@@ -4,31 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
 </head>
-<body onload="nextOption()">
+<body>
+    <h1 class="h1">Please fill the required information!</h1>
 
-    <h1 class="h1">Quiz App</h1>
-
-    <div>
-        <p class="Time" id="timer"> 2:00 </p>
+    <div class="main">
+            <label for="">Your Name:</label>
+            <br>
+            <input type="text" id="name" placeholder="Enter Your Name" required>
+            <br>
+            <br>
+            <label for="">Your Email:</label>
+            <br>
+            <input type="text" id="email" placeholder="Enter Your Email" required>
+            <br>
+            <br>
+            <button class="btn" onclick="getDataAndSubmit()">Submit</button>
     </div>
-    <div>
-        
-        <p class="p" id="ques"></p>
-        <input class="inp" onclick="clickled()" value="1" name="options" type="radio">
-        <label class="text" id="opt1"></label>
-        <br>
-        <input class="inp" onclick="clickled()" value="2" name="options" type="radio">
-        <label class="text" id="opt2"></label>
-        <br>
-        <input class="inp" onclick="clickled()" value="3" name="options" type="radio">
-        <label class="text" id="opt3"></label>
-        <br>
-        <br>
-        <button class="btn" disabled id="btn" onclick="nextOption()">Next</button>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="app.js"></script>
 </body>
 </html>
